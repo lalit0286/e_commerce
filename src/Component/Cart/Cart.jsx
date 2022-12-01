@@ -31,12 +31,11 @@ let DecreaseProduct=(product)=>{
                   <div className="col-md-4">
                   <h3>{product.title}</h3>
                   <p className="lead fw-bold">
-                  {product.qty} X ${product.qty}=$
-                  {product.qty * product.price}
+                  {product.qty} X ${product.price}=$
+                 {Math.floor(product.qty * product.price)}
                   </p>
                   <button className='btn btn-success' onClick={()=>plusProduct(product)} ><AddIcon/></button>
                   <button className='btn btn-success' onClick={()=>DecreaseProduct(product)} ><RemoveIcon/></button>
-                  
                   </div>
                 </div>
               </div>
